@@ -19,9 +19,30 @@ Prime objects are equal.
 
  */
 public class Prime {
+    private int prime;
 
+    //default constructor
+    public Prime(){
+        prime = 2;
+    }
+    //constructor that accepts an integer and sets prime to the closest prime
+    //to that integer
+    public Prime(int p){
+        //call the setter
+        this.setPrime(p);
+    }
 
-
+    //getters and setters
+    public int getPrime(){
+        return this.prime;
+    }
+    public void setPrime(int pri){
+        while(!isPrime(pri)){
+            pri++;
+        }
+        //at the end of the loop a will be prime
+        this.prime = pri;
+    }
 
     //Use the following method to decide if a number is prime or not.
     public static boolean isPrime(int n) {
@@ -46,6 +67,34 @@ public class Prime {
         }
         //At the end of loop, return true.
         return true;
+    }
+    public String toString(){
+        return "prime: " + prime;
+    }
+
+    public boolean equals(Prime p){
+        //How many objects do you have here?
+        //there are two objects: p and this
+        if(this.prime == p.prime){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public Prime add(int a){
+        //How many Prime objects are there?: this and the one you create
+        // and return
+        //create a Prime object
+        Prime P = new Prime(a + this.prime);
+        return P;
+    }
+    public Prime add(Prime p){
+        //How many Prime objects are there?: Three: this, p and the one you create
+        // and return
+        //create a Prime object
+        Prime P = new Prime(p.prime + this.prime);
+        return P;
     }
 
 }
