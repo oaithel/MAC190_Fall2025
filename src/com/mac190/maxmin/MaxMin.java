@@ -1,0 +1,33 @@
+package com.mac190.maxmin;
+/*
+Design and code a class MaxMin that has the following properties:
+Two integer member variables max and min where min is always smaller
+than max.
+//default constructor to set both to 0
+//constructor that accepts one value and stes both to that value
+//constructor that accepts two values and set min to the smallest
+and max to the largest.
+
+//getters for min and max
+//setter setMinMax that accepts two values and sets min to smallest and max to largest
+//setter setMin that accepts an integer and if the integer is larger than max, then
+min is set to old value of max and max to the input value. Otherwise set min to
+input value
+//setter setMax that accepts an integer and if the input is smaller than min then max is set
+to old value of min and min to input value. Otherwise set max to the input value
+
+//toString method
+//equals method
+
+//method MinMax add(int a) that adds a to both min and max and returns a new
+MinMax object
+//method MinMax add(MinMax m) returns a MinMax object tht is the sum of this and
+m objects.
+//method static MinMax(MinMax m1, MinMax m2) that returns a MinMax object that
+is the sum of m1 and m2.
+//Test your class extensively.
+
+
+ */
+public class MaxMin {
+}
