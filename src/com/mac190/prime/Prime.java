@@ -93,8 +93,8 @@ public class Prime {
         //How many Prime objects are there?: Three: this, p and the one you create
         // and return
         //create a Prime object
-        Prime P = new Prime(p.prime + this.prime);
-        return P;
+        Prime res = new Prime(p.prime + this.prime);
+        return res;
     }
 
 }

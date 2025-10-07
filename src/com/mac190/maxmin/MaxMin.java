@@ -30,4 +30,59 @@ is the sum of m1 and m2.
 
  */
 public class MaxMin {
+    private int min, max;
+
+    public MaxMin(){
+        min = max = 0;
+    }
+
+    public MaxMin(int a){
+        min = max = a;
+    }
+
+    public MaxMin(int a, int b){
+        this.setMaxMin(a, b);
+    }
+
+    //getters
+    public int getMin(){
+        return this.min;
+    }
+    public int getMax(){
+        return this.max;
+    }
+    //setters
+    public void setMaxMin(int a, int b){
+        if(a > b){
+            this.max = a;
+            this.min = b;
+        }else{
+            this.max = b;
+            this.min = a;
+        }
+    }
+    //setter for min
+    public void setMin(int a){
+        if(a > max){
+            min = max;
+            max = a;
+        }else{
+            min = a;
+        }
+    }
+    //setter max
+    public void setMax(int a){
+        if(a < min){
+            //set max to old min
+            max = min;
+            //set min to input
+            min = a;
+        }else{
+            max = a;
+        }
+    }
+
+    public String toString(){
+        return "(" + min + ", " + max + ")";
+    }
 }

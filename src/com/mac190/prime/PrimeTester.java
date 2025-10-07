@@ -26,5 +26,13 @@ public class PrimeTester {
         //add P1 to P2
         P2 = P2.add(P1);
         System.out.println("P2: " + P2 + " P1: " + P1);
+        //make a call to isPrime
+        //Static methods are invoked on the class not on an object.
+        //because there is one method for all objects
+        if(Prime.isPrime(9)){
+            System.out.println("9 is prime");
+        }else{
+            System.out.println("9 is not prime");
+        }
     }
 }
