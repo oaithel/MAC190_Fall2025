@@ -16,7 +16,7 @@ public class PrimeTester {
         }else{
             System.out.println("P1 is Not equal to P2");
         }
-//change
+
         //add 4 to P1
         P1 = P1.add(4);
         System.out.println("P1: " + P1);
