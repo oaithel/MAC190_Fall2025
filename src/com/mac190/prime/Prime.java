@@ -81,7 +81,7 @@ public class Prime {
             return false;
         }
     }
-
+//change
     public Prime add(int a){
         //How many Prime objects are there?: this and the one you create
         // and return
