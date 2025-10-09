@@ -85,4 +85,23 @@ public class MaxMin {
     public String toString(){
         return "(" + min + ", " + max + ")";
     }
+
+    public MaxMin add(int a){
+        //create a new MaxMin object
+        MaxMin M = new MaxMin(this.min + a, this.max+a);
+        return M;
+    }
+    public MaxMin add(MaxMin m){
+        //create a new MaxMin object
+        MaxMin M = new MaxMin(this.min + m.min, this.max+m.max);
+        return M;
+    }
+    public static MaxMin add(MaxMin m1, MaxMin m2){
+        //How many objects do we have total? Three objects: m1, m2 and the
+        //one we create to return. There is no "this" in static methods
+        //because the method belongs to the class not to a specific
+        //object. When this method is called, it's invoked on the class.
+        MaxMin M = new MaxMin(m1.min + m2.min, m1.max+m2.max);
+        return M;
+    }
 }
