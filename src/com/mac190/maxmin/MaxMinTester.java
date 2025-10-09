@@ -1,7 +1,7 @@
 package com.mac190.maxmin;
 
 public class MaxMinTester {
-    static void main() {
+    public static void main(String[] args) {
         //create a default MaxMin M1
         MaxMin M1 = new MaxMin();
         System.out.println("M1: " + M1);
