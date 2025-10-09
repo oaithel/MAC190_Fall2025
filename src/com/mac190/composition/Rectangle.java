@@ -9,7 +9,8 @@ set it to absolute value
 set to absolute value if negative
 5- setters getters for length and width
 6- toString and equals.
-7- method static Rectangle add (int a) that adds a to both length and width
+7- method static Rectangle add (Rectangle r, int a) returns a Rectangle similar to r with
+length and width augmented by a
 8- method rectangle add (rectangle r) that returns a rectangle that is the sum
 of the two rectangles r and this
 9- Method to return perimeter
