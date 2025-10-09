@@ -1,4 +1,7 @@
 package com.mac190.composition;
+
+import java.util.Objects;
+
 /*
 Design a class Rectangle that has the following properties:
 1- double length and width
@@ -9,7 +12,7 @@ set it to absolute value
 set to absolute value if negative
 5- setters getters for length and width
 6- toString and equals.
-7- method static Rectangle add (Rectangle r, int a) returns a Rectangle similar to r with
+7- method static Rectangle add (Rectangle r, double a) returns a Rectangle similar to r with
 length and width augmented by a
 8- method rectangle add (rectangle r) that returns a rectangle that is the sum
 of the two rectangles r and this
@@ -18,4 +21,70 @@ of the two rectangles r and this
  */
 public class Rectangle {
     private double length, width;
+
+    public Rectangle(){
+        this.setLength(0);
+        this.setWidth(0);
+    }
+    public Rectangle(double a){
+        this.setLength(a);
+        this.setWidth(a);
+    }
+    public Rectangle(double a, double b){
+        this.setLength(a);
+        this.setWidth(b);
+    }
+    public double getLength() {
+        return length;
+    }
+
+    public void setLength(double len) {
+        this.length = Math.abs(len);
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public void setWidth(double wid) {
+        this.width = Math.abs(wid);
+    }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "length=" + length +
+                ", width=" + width +
+                '}';
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(length, width);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(!obj.getClass().equals(this.getClass()))
+            return false;
+        Rectangle rec = (Rectangle) obj; //cast obj into a Rectangle object
+        //comparate this and rec
+
+        if((Double.compare(this.length, rec.length) ==0) && (Double.compare(this.width, rec.width) == 0)){
+            return true;
+        }
+        return false;
+    }
+    public static Rectangle add(Rectangle r, double a) {
+        //create a new Rectangle with length of r plus a same for width
+
+
+        //return it
+    }
+
+    //this returned a Rectangle that is the sum of this and r
+    //sum lengths and widths together.
+    public Rectangle add (Rectangle r){
+
+    }
 }
