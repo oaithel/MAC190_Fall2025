@@ -90,6 +90,10 @@ public class Rectangle {
         Rectangle R1 = new Rectangle(this.length + r.length, this.width + r.width);
         return R1;
     }
+    public static Rectangle add(Rectangle r1, Rectangle r2){
+        Rectangle R1 = new Rectangle(r1.length + r2.length, r1.width + r2.width);
+        return R1;
+    }
     public double perimeter(){
         return 2*this.length + 2*this.width;
     }
