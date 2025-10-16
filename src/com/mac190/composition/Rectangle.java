@@ -77,14 +77,23 @@ public class Rectangle {
     }
     public static Rectangle add(Rectangle r, double a) {
         //create a new Rectangle with length of r plus a same for width
-
-
+        Rectangle R1 = new Rectangle(r.length + a, r.width + a);
         //return it
+        return R1;
     }
 
     //this returned a Rectangle that is the sum of this and r
     //sum lengths and widths together.
     public Rectangle add (Rectangle r){
-
+        //how many input object do we have? Two: r and this
+        //The output is a third Rectangle object which is the sum of the two
+        Rectangle R1 = new Rectangle(this.length + r.length, this.width + r.width);
+        return R1;
+    }
+    public double perimeter(){
+        return 2*this.length + 2*this.width;
+    }
+    public double area(){
+        return this.length*this.width;
     }
 }
