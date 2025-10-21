@@ -19,7 +19,7 @@ Prime objects are equal.
 
  */
 public class Prime {
-    private int prime;
+    protected int prime;
 
     //default constructor
     public Prime(){
