@@ -42,9 +42,10 @@ public class Point {
         return "(" + X +", " + Y +")";
     }
 
-    public boolean equals(Point o) {
-        if (o == null ) return false;
-        return Double.compare(this.X, o.X) == 0 && Double.compare(this.Y, o.Y) == 0;
+    public boolean equals(Object o) {
+        if (o == null || !(o instanceof Point)) return false;
+        Point p = (Point) o;
+        return Double.compare(this.X, p.X) == 0 && Double.compare(this.Y, p.Y) == 0;
     }
 
     public double distance(Point p){
