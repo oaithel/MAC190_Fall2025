@@ -12,11 +12,9 @@ public class Pyramid {
         pyramidHeight = h;
     }
     public Pyramid(double b, double c, double h){
-        baseTriangle = new Triangle(b, c);
         pyramidHeight = h;
     }
     public Pyramid(double b){
-        baseTriangle = new Triangle(b);
         pyramidHeight = b;
     }
     public Pyramid(Pyramid p){
