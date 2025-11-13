@@ -21,4 +21,36 @@ Test your class.
 
  */
 public class BMW extends Vehicle{
+    //TODO: Continue implement BMW, Tesla classes and test them
+
+
+    @Override
+    void turnRight(double degrees) {
+
+    }
+
+    @Override
+    void turnLeft(double degrees) {
+
+    }
+
+    @Override
+    void brake() {
+
+    }
+
+    @Override
+    boolean speedUp(double speed) {
+        return false;
+    }
+
+    @Override
+    boolean moveBackwards() {
+        return false;
+    }
+
+    @Override
+    boolean moveForward() {
+        return false;
+    }
 }
