@@ -45,6 +45,6 @@ public class Security {
         this.price = price;
     }
     public String toString(){
-        return "ticker: " + ticker + " type: " + this.type + " num shares: " + this.shares + " price: " + this.price;
+        return "ticker: " + ticker + " type: " + this.type + " num shares: " + this.shares + " price: " + this.price + "\n";
     }
 }
