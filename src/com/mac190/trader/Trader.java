@@ -14,13 +14,27 @@ public class Trader {
         Scanner sc = new Scanner(System.in);
         String answer = "yes";
         while(!answer.toLowerCase().equals("no")){
-            System.out.println("What's the ticker: ");
-            String ticker = sc.next();
-            System.out.println("How many shares would you like: ");
-            int shares = sc.nextInt();
-            System.out.println("How much are you paying: ");
-            float price  = sc.nextFloat();
-            broker.buy(ticker,type,shares,price);
+            System.out.println("Buying or selling?");
+            String buyOrSell = sc.nextLine();
+            if(buyOrSell.contains("buy")) {
+                System.out.println("What's the ticker: ");
+                String ticker = sc.next();
+                System.out.println("How many shares would you like: ");
+                int shares = sc.nextInt();
+                System.out.println("How much are you paying: ");
+                float price = sc.nextFloat();
+                broker.buy(ticker, type, shares, price);
+            }else if(buyOrSell.contains("sell")){
+                System.out.println("What's the ticker: ");
+                String ticker = sc.next();
+                System.out.println("How many shares would you like to sell: ");
+                int shares = sc.nextInt();
+                System.out.println("What price: ");
+                float price = sc.nextFloat();
+                broker.sell(ticker, type, shares, price);
+            }else{
+                System.out.println("Not sure what you want!");
+            }
             System.out.println("Holdings: " + broker.getHoldings());
             sc.nextLine();
             System.out.println("Do you want buy.sell something else?");

@@ -1,5 +1,6 @@
 package com.mac190.trader;
 
+import com.mac190.stocks.Broker;
 import com.mac190.stocks.Oanda;
 import com.mac190.stocks.Robinhood;
 
@@ -14,7 +15,8 @@ public class TraderTester {
         String choice = sc.next().toLowerCase(Locale.ROOT);
         if (choice.contains("stock")) {
             //create a Trader object with Robinhood as the broker
-            Trader T = new Trader(new Robinhood());
+            Robinhood b = new Robinhood();
+            Trader T = new Trader(b);
             T.trade("STK");
         }else if (choice.contains("currencies")) {
             Trader T = new Trader(new Oanda());

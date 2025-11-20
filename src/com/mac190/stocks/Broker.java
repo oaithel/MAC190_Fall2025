@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * abstract method buy that accepts all the required parameters
  * abstract class sell that requires as well all parameters.
  */
-abstract class Broker {
+public abstract class Broker {
     //A list of securities
     private ArrayList<Security> holdings;
 
