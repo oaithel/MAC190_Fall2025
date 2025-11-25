@@ -13,7 +13,7 @@ public interface iDrive {
     void turnRight(double degrees);
     void turnLeft(double degrees);
     void brake(); //puts the car into a stop mode.
-    boolean speedUp(double speed);
+    boolean speedUp(double speed) throws Exception;
     boolean moveBackwards();
     boolean moveForward();
 

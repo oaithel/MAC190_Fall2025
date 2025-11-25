@@ -11,12 +11,23 @@ public class VehicleTester {
         //use a reference to a Vehicle to drive the BMW.
         Vehicle V = yourCar;
         V.moveForward();
-        V.speedUp(20);
+        try {
+            V.speedUp(120);
+            V.speedUp(20);
+        }catch (Exception e){
+            System.out.println("Cauggt an exception: " + e.getMessage());
+        }
+        //TODO: catch ohter unchecked exceptions in the the right order.
         System.out.println("Your car: " + yourCar);
         //Moving the referrence V from the BMW to the Tesla
         V = yourTesla;
         V.moveForward();
-        V.speedUp(30);
+        try {
+            V.speedUp(130);
+        }catch (Exception e){
+            System.out.println("Caught an exception: " + e.getMessage());
+        }
+        //TODO: Catch other exceptions
         System.out.println("V: " + V);
         V.moveBackwards();
         // Ho to use an interface
@@ -29,7 +40,11 @@ public class VehicleTester {
         //An interface can move from one object to another object
         driver = yourTesla;
         System.out.println("driver: " + driver);
-        driver.speedUp(40);
-
+        try {
+            driver.speedUp(40);
+        }catch (Exception e){
+            System.out.println("Caught an exception: " + e.getMessage());
+        }
+//TODO: catch the ohter excetions in the right order.
     }
 }

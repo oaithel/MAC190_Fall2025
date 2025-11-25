@@ -22,6 +22,9 @@ speedUp only increases the speed if it is movingForward.
 
 Test your class.
 
+Modify the class so that it throws a checked exception if the speed is about to go above 100.
+Modify the tester to catch the exception.
+
  */
 public class BMW extends Vehicle implements iDrive{
     //TODO: Continue implement BMW, Tesla classes and test them
@@ -117,20 +120,20 @@ public class BMW extends Vehicle implements iDrive{
     }
 
     @Override
-    public boolean speedUp(double speed) {
+    public boolean speedUp(double speed) throws Exception{
         if (state == State.MOVINGFORWAD && this.speed < 100) {
             this.speed = Math.min((this.speed + speed), 100);
             System.out.println("Driving at " + this.speed + " miles/hour");
             return true;
         } else {
             System.out.println("Cannot speed!");
-            if (speed >= 100) {
-                System.out.println("limit speed reached");
-                return false;
+            if (this.speed >= 100) {
+                //throw exception
+                throw new Exception("BMW: We are already past 100 miles/hour");
             }
             if (state == State.MOVINGBACKWARD) {
-                System.out.println("Moving backwards");
-                return false;
+                //throw an unchecked exception with message "Moving backwards cannot speed"
+
             }
         }
         return false;

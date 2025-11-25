@@ -73,7 +73,7 @@ abstract class Vehicle {
     abstract void turnRight(double degrees);
     abstract void turnLeft(double degrees);
     abstract void brake(); //puts the car into a stop mode.
-    abstract boolean speedUp(double speed);
+    abstract boolean speedUp(double speed) throws Exception;
     abstract boolean moveBackwards();
     abstract boolean moveForward();
 
