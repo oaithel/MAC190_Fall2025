@@ -8,7 +8,8 @@ import java.io.IOException;
 public class IntroFiles {
     public static void main(String[] args) {
         //The File object allows you to manage files and directories.
-        File myFile = new File("C:\\Users\\momo\\LAGCC\\courses\\Mac190\\test.txt");
+        String fileName = "C:\\Users\\momo\\LAGCC\\courses\\Mac190\\test.txt";
+        File myFile = new File(fileName);
         System.out.println("Is it a directory? " + myFile.isDirectory());
         System.out.println("Is it a file? " + myFile.isFile());
         System.out.println("Does it exist? " + myFile.exists());
