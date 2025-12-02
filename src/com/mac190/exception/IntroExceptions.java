@@ -62,11 +62,13 @@ public class IntroExceptions {
             System.out.println("This will be printed in all cases");
         }
 
-        try {
+        throwMeUnCheckedException(n);
+       /* try {
             throwMeUnCheckedException(n);
         }catch(NoSuchElementException e){
             System.out.println("Caught exception: " + e.getMessage());
             e.printStackTrace();
         }
+        */
     }
 }
