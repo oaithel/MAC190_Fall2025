@@ -1,6 +1,7 @@
 package com.mac190.finalReview;
-
-public class SoccerGame extends Game implements iSoccerGame{
+/*Make SoccerGame class implement Addable interface.
+ */
+public class SoccerGame extends Game implements iSoccerGame, Addable{
     private String refree;
 
     public SoccerGame(){
@@ -79,5 +80,10 @@ public class SoccerGame extends Game implements iSoccerGame{
         res.scoreA = S1.scoreA + S2.scoreA;
         res.scoreB = S1.scoreB + S2.scoreB;
         return res;
+    }
+
+    @Override
+    public Addable add(Addable a) {
+        return this.add((SoccerGame) a);
     }
 }

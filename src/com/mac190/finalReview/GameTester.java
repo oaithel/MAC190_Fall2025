@@ -29,5 +29,7 @@ public class GameTester {
         //use the static method
         S2 = SoccerGame.add(S, (SoccerGame) iS);
         System.out.println("S2: " + S2);
+        Addable A = ((SoccerGame) iS).add(S);
+        System.out.println("A: " + A);
     }
 }
