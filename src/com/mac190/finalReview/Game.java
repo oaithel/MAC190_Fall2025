@@ -5,7 +5,8 @@ import java.util.Objects;
 abstract class Game {
     private String teamA, teamB;
     private int maxPlayers, maxSubstitutes;
-    private int scoreA, scoreB, substitutionA, substitutionB;
+    protected int scoreA, scoreB;
+    protected int substitutionA, substitutionB;
 
     public Game(){
         teamA = teamB = "N/A";
@@ -105,8 +106,8 @@ abstract class Game {
 
     abstract void teamAScored(int a);
     abstract void teamBScored(int a);
-    abstract void substitutionA(int a);
-    abstract void substitutionB(int a);
+    abstract void substitutionA(int a) throws Exception;
+    abstract void substitutionB(int a) throws Exception;
     public String whoIsWinning(){
         if(scoreA > scoreB){
             return teamA;
