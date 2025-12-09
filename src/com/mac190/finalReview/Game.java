@@ -109,9 +109,9 @@ abstract class Game {
     abstract void substitutionB(int a);
     public String whoIsWinning(){
         if(scoreA > scoreB){
-            return teamA
+            return teamA;
         }else if(scoreB > scoreA){
-            return teamB
+            return teamB;
         } else{
             return "Draw";
         }
